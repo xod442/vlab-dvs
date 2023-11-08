@@ -62,7 +62,7 @@ def makedvs(vnic,cluster_id,dvs_name,vsphere_ip,vsphere_user,vsphere_pass,datace
     network_folder = datacenter.networkFolder
     #Create DV Switch
     dv_switch = create_dvSwitch(si, content, network_folder, cluster, dvs_name, vnic)
-
+    Disconnect(si)
     return dv_switch
 
 def get_obj(content, vimtype, name=None):

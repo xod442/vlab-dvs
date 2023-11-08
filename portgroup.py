@@ -65,7 +65,7 @@ def makepgrp(dv_port_name,vlan_number,dvs_name,vsphere_ip,vshpere_user,vsphere_p
             # Look through the list of DVS and find the match
             if dv_switch.name == dvs_name:
                 response = add_dvPort_group(si, dv_switch, dv_port_name, vlan_number)
-
+    Disconnect(si)
     return response
 
 def wait_for_task(task, actionName='job', hideResult=False):
