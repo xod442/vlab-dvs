@@ -29,8 +29,7 @@ __maintainer__ = "Rick Kauffman"
 __status__ = "Alpha"
 
 
-Usage: This python file reverts and resets all VM's and deletes all Distributed
-Virtual switches
+Usage: Usage: This python file creates a vmware distributed virtual switch
 
 '''
 from pyVmomi import vim
