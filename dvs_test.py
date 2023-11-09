@@ -39,17 +39,18 @@ import ssl
 import datetime
 import logging
 import time
-from portgroup import makepgrp
+from dvsx import makedvs
 
-dv_port_name =dv_port_test
-vlan_number = 10
+vnic = 'vmnic7'
+cluster_id = 'LG10'
 dvs_name = 'dvs_test'
 vsphere_ip = '10.250.0.50'
 vsphere_user = 'administrator@vsphere.local'
 vsphere_pass = 'Aruba123!@#'
+datacenter_name = 'DCN-ILT-VLAB'
 
 
 
-response = makepgrp(dv_port_name,vlan_number,dvs_name,vsphere_ip,vshpere_user,vsphere_pass):
+response = makedvs(vnic,cluster_id,dvs_name,vsphere_ip,vsphere_user,vsphere_pass,datacenter_name)
 
-return respone
+print(response)

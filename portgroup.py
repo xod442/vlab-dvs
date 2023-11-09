@@ -41,7 +41,7 @@ import logging
 import time
 
 
-def makepgrp(dv_port_name,vlan_number,dvs_name,vsphere_ip,vshpere_user,vsphere_pass):
+def makepgrp(dv_port_name,vlan_number,dvs_name,vsphere_ip,vsphere_user,vsphere_pass):
 
     sslContext = ssl._create_unverified_context()
 
@@ -61,10 +61,10 @@ def makepgrp(dv_port_name,vlan_number,dvs_name,vsphere_ip,vshpere_user,vsphere_p
     dvs_list = content.viewManager.CreateContainerView(content.rootFolder,
                                                      [vim.DistributedVirtualSwitch],
                                                      True)
-        for dv_switch in dvs_list.view:
-            # Look through the list of DVS and find the match
-            if dv_switch.name == dvs_name:
-                response = add_dvPort_group(si, dv_switch, dv_port_name, vlan_number)
+    for dv_switch in dvs_list.view:
+        # Look through the list of DVS and find the match
+        if dv_switch.name == dvs_name:
+            response = add_dvPort_group(si, dv_switch, dv_port_name, vlan_number)
     Disconnect(si)
     return response
 

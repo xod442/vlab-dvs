@@ -41,7 +41,7 @@ import logging
 import time
 from portgroup import makepgrp
 
-dv_port_name =dv_port_test
+dv_port_name = 'dv_port_test'
 vlan_number = 10
 dvs_name = 'dvs_test'
 vsphere_ip = '10.250.0.50'
@@ -50,6 +50,6 @@ vsphere_pass = 'Aruba123!@#'
 
 
 
-response = makepgrp(dv_port_name,vlan_number,dvs_name,vsphere_ip,vshpere_user,vsphere_pass):
+response = makepgrp(dv_port_name,vlan_number,dvs_name,vsphere_ip,vsphere_user,vsphere_pass)
 
-return respone
+print(response)
