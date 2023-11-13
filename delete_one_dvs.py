@@ -60,9 +60,11 @@ def delete_one_dvs(vsphere_ip,vsphere_user,vsphere_pass, lab_group=None):
     dvs_list = content.viewManager.CreateContainerView(content.rootFolder,
                                                      [vim.DistributedVirtualSwitch],
                                                      True)
-    
+
+
     for dvs in dvs_list.view:
-        if str(lab_group) in dvs.name:
+        dvs_number = dvs.name[-1:]
+        if str(lab_group) == dvs_number:
             task = dvs.Destroy_Task()
             response = WaitForTask(task)
 
