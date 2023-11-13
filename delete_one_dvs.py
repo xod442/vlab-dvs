@@ -41,7 +41,7 @@ import logging
 import time
 
 
-def delete_dvs(vsphere_ip,vsphere_user,vsphere_pass, lab_group=None):
+def delete_one_dvs(vsphere_ip,vsphere_user,vsphere_pass, lab_group=None):
 
     sslContext = ssl._create_unverified_context()
 
